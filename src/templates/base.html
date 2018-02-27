@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang=en>
     <head>
-
+        {% include 'snippets/css.html' %}
+        <title> {% block head_title %} MuyPicky {% endblock head_title %}</title>
     </head>
     <body>
-        <h1> Hello from templates! {{ base_var }} </h1>
+        {% include 'snippets/nav.html' %}
+        <br>
+        <div class="container">
+            {% block content %}{% endblock content %}
+        </div>
+        {% include 'snippets/js.html' %}
     </body>
 </html>

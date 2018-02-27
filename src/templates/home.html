@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block head_title %} Home | {{ block.super }} {% endblock head_title %}
+
+{% block content %}
+    <h1> Hello from home! {{ base_var }} </h1>
+    <p>
+        Random number: {{ num }}
+    </p>
+    <p>
+        {% for item in items %}
+            <p> {{ item }} </p>
+        {% endfor %}
+    </p>
+{% endblock content %}
